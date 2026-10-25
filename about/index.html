@@ -23,6 +23,7 @@ body{margin:0;background:#F2F1E6}
 /* Figma-style arrow cursor, kept on links and buttons too */
 html{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='25' viewBox='0 0 13 18'%3E%3Cpath d='M5.65376 12.3673H5.46026L5.31717 12.4976L0.500002 16.8829L0.500002 1.19841L11.7841 12.3673H5.65376Z' fill='%23B54329' stroke='%23fff'/%3E%3C/svg%3E") 1 2,auto}
 a,button,summary,label,[role=button]{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='25' viewBox='0 0 13 18'%3E%3Cpath d='M5.65376 12.3673H5.46026L5.31717 12.4976L0.500002 16.8829L0.500002 1.19841L11.7841 12.3673H5.65376Z' fill='%23B54329' stroke='%23fff'/%3E%3C/svg%3E") 1 2,pointer}
+.chip{font-size:13px;border:1px solid #2D2A25;border-radius:999px;padding:4px 12px;background:#FBFAF3}
 /* Freelance status: rust dot that pulses beside Say hi */
 .st{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#B54329;white-space:nowrap}
 .st-dot{position:relative;width:8px;height:8px;border-radius:50%;background:#B54329;flex:none}
@@ -95,7 +96,7 @@ div[style*="repeat(4,1fr)"]{grid-template-columns:repeat(2,1fr)!important}
 <div style="display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start">
 
 <aside style="flex:0 0 240px;position:sticky;top:24px;display:flex;flex-direction:column;gap:28px;background:#fff;border:1px solid #D5D1C0;border-radius:12px;padding:16px">
-<div><div style="font-size:12px;font-weight:600;margin-bottom:8px">Layers</div><nav class="ly" aria-label="On this page" style="display:flex;flex-direction:column;gap:2px"><a class="on" href="#story"><i></i>How I got here</a><a href="#now"><i></i>Right now</a><a href="#before"><i></i>Before that</a><a href="#video"><i></i>Video</a><a href="#outside"><i></i>Outside work</a></nav></div>
+<div><div style="font-size:12px;font-weight:600;margin-bottom:8px">Layers</div><nav class="ly" aria-label="On this page" style="display:flex;flex-direction:column;gap:2px"><a class="on" href="#story"><i></i>How I got here</a><a href="#now"><i></i>Right now</a><a href="#skills"><i></i>Skills</a><a href="#before"><i></i>Before that</a><a href="#video"><i></i>Video</a><a href="#outside"><i></i>Outside work</a></nav></div>
 <div style="border-top:1px solid #E5E1D0;padding-top:16px"><div style="font-size:12px;font-weight:600;margin-bottom:12px">Properties</div>
 <dl class="pr" style="margin:0;display:flex;flex-direction:column;gap:14px"><div><dt>Based in</dt><dd>Portland</dd></div><div><dt>Email</dt><dd>hello@margaretalba.com</dd></div><div><dt>Tools</dt><dd>Figma, After Effects, Photoshop, Premiere, CapCut, HubSpot, Mailchimp, Shopify, Google Slides</dd></div></dl></div>
 </aside>
@@ -108,6 +109,11 @@ div[style*="repeat(4,1fr)"]{grid-template-columns:repeat(2,1fr)!important}
 <p class="p">Today, that design background is my biggest strength as a marketer. Everyone is competing for attention, and I know how to make work that gets noticed.</p></section>
 <section id="now" style="display:flex;flex-direction:column;gap:14px"><div class="ey">Right now</div><p class="p">At Stitch Fix, I design the promotions and growth creative that bring in new clients for the women’s and men’s lines, from Meta ads to DPA. <a href="/stitch-fix-meta" style="color:#8F3118;text-decoration:underline;text-underline-offset:3px">See the Meta work.</a></p></section>
 
+<section id="skills" style="display:flex;flex-direction:column;gap:20px"><div class="ey">Skills</div>
+<div style="display:flex;flex-direction:column;gap:10px"><div style="font-size:14px;font-weight:600">Campaigns</div><div style="display:flex;flex-wrap:wrap;gap:8px"><span class="chip">Paid social</span><span class="chip">Meta ads (static, video, DPA)</span><span class="chip">Promotions and sales</span><span class="chip">Reactivation and win-back</span><span class="chip">Email marketing</span><span class="chip">Creator and influencer marketing</span><span class="chip">Event marketing</span></div></div>
+<div style="display:flex;flex-direction:column;gap:10px"><div style="font-size:14px;font-weight:600">Creative</div><div style="display:flex;flex-wrap:wrap;gap:8px"><span class="chip">Performance creative</span><span class="chip">Iterating on past results</span><span class="chip">Audience-led messaging</span><span class="chip">Brand identity</span><span class="chip">Art direction</span><span class="chip">Video: script, shoot, edit</span><span class="chip">Motion graphics</span></div></div>
+<div style="display:flex;flex-direction:column;gap:10px"><div style="font-size:14px;font-weight:600">Working style</div><div style="display:flex;flex-wrap:wrap;gap:8px"><span class="chip">Cross-functional teams</span><span class="chip">Copywriter partnerships</span><span class="chip">High-volume production</span><span class="chip">On-time delivery</span></div></div>
+</section>
 <section id="before" style="display:flex;flex-direction:column;gap:14px"><div class="ey">Before that</div>
 <p class="p">I was at LTK until May 2024, working on in-app sales with brands like Madewell and adidas. I made the emails, social posts, banners and decks for those sales, and I designed the look of LTK’s podcast, More to Say. I also got to work on campaigns for Abercrombie &amp; Fitch and ASOS.</p>
 <p class="p">Before that, from 2017 to 2019, I was the Marketing &amp; Design Coordinator at Project Object and Upper Metal Class in Portland. I did a bit of everything there: the store identity, events, emails and the Shopify site. <a href="/project-object" style="color:#8F3118;text-decoration:underline;text-underline-offset:3px">See Project Object.</a></p></section>
