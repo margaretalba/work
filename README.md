@@ -15,7 +15,7 @@ Static site, no build step. Open `index.html` through any web server to preview,
 4. DNS can take from a few minutes to a day to update.
 
 ## Before you share it
-- **Fonts:** in each page's `<head>`, replace `YOUR_KIT_ID` with your Adobe Fonts web project ID and delete the comment markers around that line. Until then the headings use Bodoni Moda.
+- **Fonts:** every page loads the Adobe Fonts web project `haz5lhc` for IvyPresto Display. If the headings fall back to Bodoni Moda, check that IvyPresto Display is in that web project.
 - **Search engines:** every page has `<meta name="robots" content="noindex">`, so Google won't list the site. Delete that line from each page when you want it findable.
 - **Links:** About and the case studies live at `/about`, `/ltk-madewell`, `/stitch-fix-meta`, `/video`, `/ltk-adidas`, `/project-object` and `/more-to-say`. The Studio links go to margaretalba.com.
 
