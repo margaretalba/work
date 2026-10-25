@@ -37,7 +37,7 @@ a{color:inherit;text-decoration:none}
 .cv{background-color:#F2F1E6;background-image:radial-gradient(#D5D1C0 1.2px,transparent 1.2px);background-size:24px 24px}
 .fr{position:relative;display:flex;flex-direction:column;gap:10px}
 /* Every case study card matches the tallest one; tags sit on the bottom edge */
-#work{grid-auto-rows:1fr}
+.wk{grid-auto-rows:1fr}
 .fr>div:nth-child(2),.fr>div:nth-child(2)>div:last-child{flex:1}
 .fr>div:nth-child(2)>div:last-child>div:last-child{margin-top:auto}
 .sel{position:absolute;inset:26px -3px -3px -3px;border:2px solid #B54329;border-radius:14px;opacity:0;pointer-events:none;transition:opacity .15s}
@@ -89,7 +89,7 @@ a:focus-visible{outline:2px solid #B54329;outline-offset:4px}
 h1.bd{font-size:42px!important}
 aside{flex:1 1 100%!important;position:static!important}
 main{flex-basis:100%!important}
-#work{grid-template-columns:1fr!important}
+.wk{grid-template-columns:1fr!important}
 .g2{grid-template-columns:1fr!important}
 div[style*="repeat(4,1fr)"]{grid-template-columns:repeat(2,1fr)!important}
 .gc{display:none}
@@ -121,8 +121,8 @@ div[style*="repeat(4,1fr)"]{grid-template-columns:repeat(2,1fr)!important}
 </div>
 
 <!-- frames -->
-<div id="work" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:64px 40px">
-
+<div style="display:flex;flex-direction:column;gap:36px"><div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;border-bottom:1px solid #2D2A25;padding-bottom:14px"><h2 class="bd" style="margin:0;font-size:36px;line-height:1.1">Campaigns</h2><span style="font-size:14px;color:#6B665E">Promotions, paid social and partner sales</span></div>
+<div id="work" class="wk" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:64px 40px">
 <a class="fr" href="/stitch-fix-meta">
 <div style="display:flex;justify-content:space-between;font-size:12px;color:#6B665E"><span>Stitch Fix Meta Growth Creative</span><span>01</span></div>
 <div style="background:#FBFAF3;border:1px solid #D5D1C0;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:20px"><div class="ph" style="aspect-ratio:4/3;position:relative"><img loading="lazy" decoding="async" src="/assets/img/thumb-stitch-fix.webp" alt="A styled spring outfit flat lay: a cream vest, cuffed jeans, a blue striped shirt, an olive skirt, a knit dress, a tote and sneakers." style="display:block;width:100%;height:100%;object-fit:cover;border-radius:10px"><div aria-hidden="true" style="position:absolute;inset:0;border:2px solid #B54329;border-radius:10px;pointer-events:none"><i class="hn" style="left:-6px;top:-6px"></i><i class="hn" style="right:-6px;top:-6px"></i><i class="hn" style="left:-6px;bottom:-6px"></i><i class="hn" style="right:-6px;bottom:-6px"></i><span style="position:absolute;left:12px;bottom:12px;background:#F9F9EE;border:1px solid #D5D1C0;border-radius:6px;padding:4px 10px;font-size:12px;font-weight:500;color:#2D2A25">Stitch Fix · Meta ads</span></div></div><div style="padding:0 8px 8px;display:flex;flex-direction:column;gap:14px"><div class="ct bd" style="font-size:28px;line-height:1.12;transition:color .2s">Meta ads for Stitch Fix that brought lapsed clients back for less.</div><div style="display:flex;flex-wrap:wrap;gap:8px"><span class="chip">Paid social</span><span class="chip">Reactivation</span><span class="chip">Acquisition</span></div></div></div>
@@ -141,15 +141,20 @@ div[style*="repeat(4,1fr)"]{grid-template-columns:repeat(2,1fr)!important}
 <div class="sel" aria-hidden="true"><i class="hn" style="left:-6px;top:-6px"></i><i class="hn" style="right:-6px;top:-6px"></i><i class="hn" style="left:-6px;bottom:-6px"></i><i class="hn" style="right:-6px;bottom:-6px"></i></div>
 </a>
 
-<a class="fr" href="/video">
-<div style="display:flex;justify-content:space-between;font-size:12px;color:#6B665E"><span>Video and creator content</span><span>04</span></div>
-<div style="background:#FBFAF3;border:1px solid #D5D1C0;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:20px"><div class="ph" style="aspect-ratio:4/3;position:relative"><img loading="lazy" decoding="async" src="/assets/img/thumb-video.webp" alt="A Premiere Pro edit of the Digital gardening video, with the timeline and the garden website on screen." style="display:block;width:100%;height:100%;object-fit:cover;border-radius:10px"><div aria-hidden="true" style="position:absolute;inset:0;border:2px solid #B54329;border-radius:10px;pointer-events:none"><i class="hn" style="left:-6px;top:-6px"></i><i class="hn" style="right:-6px;top:-6px"></i><i class="hn" style="left:-6px;bottom:-6px"></i><i class="hn" style="right:-6px;bottom:-6px"></i><span style="position:absolute;left:12px;bottom:12px;background:#F9F9EE;border:1px solid #D5D1C0;border-radius:6px;padding:4px 10px;font-size:12px;font-weight:500;color:#2D2A25">Video · Script, film, edit</span></div></div><div style="padding:0 8px 8px;display:flex;flex-direction:column;gap:14px"><div class="ct bd" style="font-size:28px;line-height:1.12;transition:color .2s">Video made for the platform, up to 459K views.</div><div style="display:flex;flex-wrap:wrap;gap:8px"><span class="chip">Content marketing</span><span class="chip">Short-form video</span><span class="chip">YouTube</span></div></div></div>
+<a class="fr" href="/ltk-adidas">
+<div style="display:flex;justify-content:space-between;font-size:12px;color:#6B665E"><span>LTK × adidas</span><span>04</span></div>
+<div style="background:#FBFAF3;border:1px solid #D5D1C0;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:20px"><div class="ph" style="aspect-ratio:4/3;position:relative"><img loading="lazy" decoding="async" src="/assets/img/thumb-adidas.webp" alt="Three phones showing the #LTKxadidas story series: a get-ready announcement, Ultraboost shoes and women’s workout gear." style="display:block;width:100%;height:100%;object-fit:cover;border-radius:10px"><div aria-hidden="true" style="position:absolute;inset:0;border:2px solid #B54329;border-radius:10px;pointer-events:none"><i class="hn" style="left:-6px;top:-6px"></i><i class="hn" style="right:-6px;top:-6px"></i><i class="hn" style="left:-6px;bottom:-6px"></i><i class="hn" style="right:-6px;bottom:-6px"></i><span style="position:absolute;left:12px;bottom:12px;background:#F9F9EE;border:1px solid #D5D1C0;border-radius:6px;padding:4px 10px;font-size:12px;font-weight:500;color:#2D2A25">adidas · Email + social</span></div></div><div style="padding:0 8px 8px;display:flex;flex-direction:column;gap:14px"><div class="ct bd" style="font-size:28px;line-height:1.12;transition:color .2s">The first-ever in-app LTK × adidas sale.</div><div style="display:flex;flex-wrap:wrap;gap:8px"><span class="chip">Email</span><span class="chip">Social</span><span class="chip">Events</span></div></div></div>
 <div class="sel" aria-hidden="true"><i class="hn" style="left:-6px;top:-6px"></i><i class="hn" style="right:-6px;top:-6px"></i><i class="hn" style="left:-6px;bottom:-6px"></i><i class="hn" style="right:-6px;bottom:-6px"></i></div>
 </a>
 
-<a class="fr" href="/ltk-adidas">
-<div style="display:flex;justify-content:space-between;font-size:12px;color:#6B665E"><span>LTK × adidas</span><span>05</span></div>
-<div style="background:#FBFAF3;border:1px solid #D5D1C0;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:20px"><div class="ph" style="aspect-ratio:4/3;position:relative"><img loading="lazy" decoding="async" src="/assets/img/thumb-adidas.webp" alt="Three phones showing the #LTKxadidas story series: a get-ready announcement, Ultraboost shoes and women’s workout gear." style="display:block;width:100%;height:100%;object-fit:cover;border-radius:10px"><div aria-hidden="true" style="position:absolute;inset:0;border:2px solid #B54329;border-radius:10px;pointer-events:none"><i class="hn" style="left:-6px;top:-6px"></i><i class="hn" style="right:-6px;top:-6px"></i><i class="hn" style="left:-6px;bottom:-6px"></i><i class="hn" style="right:-6px;bottom:-6px"></i><span style="position:absolute;left:12px;bottom:12px;background:#F9F9EE;border:1px solid #D5D1C0;border-radius:6px;padding:4px 10px;font-size:12px;font-weight:500;color:#2D2A25">adidas · Email + social</span></div></div><div style="padding:0 8px 8px;display:flex;flex-direction:column;gap:14px"><div class="ct bd" style="font-size:28px;line-height:1.12;transition:color .2s">The first-ever in-app LTK × adidas sale.</div><div style="display:flex;flex-wrap:wrap;gap:8px"><span class="chip">Email</span><span class="chip">Social</span><span class="chip">Events</span></div></div></div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:36px"><div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;border-bottom:1px solid #2D2A25;padding-bottom:14px"><h2 class="bd" style="margin:0;font-size:36px;line-height:1.1">Content &amp; brand</h2><span style="font-size:14px;color:#6B665E">Video, brand launches and identity</span></div>
+<div class="wk" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:64px 40px">
+<a class="fr" href="/video">
+<div style="display:flex;justify-content:space-between;font-size:12px;color:#6B665E"><span>Video and creator content</span><span>05</span></div>
+<div style="background:#FBFAF3;border:1px solid #D5D1C0;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:20px"><div class="ph" style="aspect-ratio:4/3;position:relative"><img loading="lazy" decoding="async" src="/assets/img/thumb-video.webp" alt="A Premiere Pro edit of the Digital gardening video, with the timeline and the garden website on screen." style="display:block;width:100%;height:100%;object-fit:cover;border-radius:10px"><div aria-hidden="true" style="position:absolute;inset:0;border:2px solid #B54329;border-radius:10px;pointer-events:none"><i class="hn" style="left:-6px;top:-6px"></i><i class="hn" style="right:-6px;top:-6px"></i><i class="hn" style="left:-6px;bottom:-6px"></i><i class="hn" style="right:-6px;bottom:-6px"></i><span style="position:absolute;left:12px;bottom:12px;background:#F9F9EE;border:1px solid #D5D1C0;border-radius:6px;padding:4px 10px;font-size:12px;font-weight:500;color:#2D2A25">Video · Script, film, edit</span></div></div><div style="padding:0 8px 8px;display:flex;flex-direction:column;gap:14px"><div class="ct bd" style="font-size:28px;line-height:1.12;transition:color .2s">Video made for the platform, up to 459K views.</div><div style="display:flex;flex-wrap:wrap;gap:8px"><span class="chip">Content marketing</span><span class="chip">Short-form video</span><span class="chip">YouTube</span></div></div></div>
 <div class="sel" aria-hidden="true"><i class="hn" style="left:-6px;top:-6px"></i><i class="hn" style="right:-6px;top:-6px"></i><i class="hn" style="left:-6px;bottom:-6px"></i><i class="hn" style="right:-6px;bottom:-6px"></i></div>
 </a>
 
@@ -169,7 +174,7 @@ div[style*="repeat(4,1fr)"]{grid-template-columns:repeat(2,1fr)!important}
 <div style="display:flex;justify-content:space-between;font-size:12px;color:#6B665E"><span>What’s next</span><span>08</span></div>
 <div style="background:#FBFAF3;border:1px solid #D5D1C0;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:20px"><div style="aspect-ratio:4/3;border-radius:10px;background:#B54329;color:#F9F9EE;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:24px"><span class="bd" style="font-size:112px;line-height:.9">37+</span><span style="font-size:14px;letter-spacing:.08em;text-transform:uppercase;opacity:.85">promotions in one year, and counting</span></div><div style="padding:0 8px 8px;display:flex;flex-direction:column;gap:14px"><div class="bd" style="font-size:28px;line-height:1.12">Want the full story? I’d love to walk you through it.</div><div style="display:flex;flex-wrap:wrap;gap:10px"><a class="hv" href="mailto:hello@margaretalba.com?subject=R%C3%A9sum%C3%A9%20request" style="border:1px solid #2D2A25;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:500"><span class="fl" aria-hidden="true"></span>Request résumé</a><a class="hv dk" href="mailto:hello@margaretalba.com" style="background:#2D2A25;color:#F9F9EE;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:500"><span class="fl" aria-hidden="true"></span>Say hi</a></div></div></div>
 </div>
-
+</div>
 </div>
 
 <!-- about strip -->
