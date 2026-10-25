@@ -24,6 +24,10 @@ a{color:inherit;text-decoration:none}
 .bd{font-family:'ivypresto-display','Bodoni Moda',serif;font-weight:400;letter-spacing:-.02em}
 .cv{background-color:#F2F1E6;background-image:radial-gradient(#D5D1C0 1.2px,transparent 1.2px);background-size:24px 24px}
 .fr{position:relative;display:flex;flex-direction:column;gap:10px}
+/* Every case study card matches the tallest one; tags sit on the bottom edge */
+#work{grid-auto-rows:1fr}
+.fr>div:nth-child(2),.fr>div:nth-child(2)>div:last-child{flex:1}
+.fr>div:nth-child(2)>div:last-child>div:last-child{margin-top:auto}
 .sel{position:absolute;inset:26px -3px -3px -3px;border:2px solid #B54329;border-radius:14px;opacity:0;pointer-events:none;transition:opacity .15s}
 .fr:hover .sel,.fr.on .sel{opacity:1}
 .hn{position:absolute;width:9px;height:9px;background:#fff;border:2px solid #B54329;box-sizing:border-box}
