@@ -16,7 +16,8 @@ Static site, no build step. Open `index.html` through any web server to preview,
 
 ## Before you share it
 - **Fonts:** every page loads the Adobe Fonts web project `haz5lhc` for IvyPresto Display. If the headings fall back to Bodoni Moda, check that IvyPresto Display is in that web project.
-- **Search engines:** every page has `<meta name="robots" content="noindex">`, so Google won't list the site. Delete that line from each page when you want it findable.
+- **Search engines:** the site is open to search engines, with a `sitemap.xml` and `robots.txt` at the root. The 404 page stays hidden from search.
+- **Link previews:** each page has its own 1200×630 preview image in `assets/img/og/`, shown when a link is shared on LinkedIn, Slack, iMessage and similar.
 - **Links:** About and the case studies live at `/about`, `/ltk-madewell`, `/stitch-fix-meta`, `/video`, `/ltk-adidas`, `/project-object` and `/more-to-say`. The Studio links go to margaretalba.com.
 
 ## Editing later
