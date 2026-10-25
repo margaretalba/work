@@ -19,6 +19,12 @@ body{margin:0;background:#F2F1E6}
 /* Figma-style arrow cursor, kept on links and buttons too */
 html{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='25' viewBox='0 0 13 18'%3E%3Cpath d='M5.65376 12.3673H5.46026L5.31717 12.4976L0.500002 16.8829L0.500002 1.19841L11.7841 12.3673H5.65376Z' fill='%23B54329' stroke='%23fff'/%3E%3C/svg%3E") 1 2,auto}
 a,button,summary,label,[role=button]{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='25' viewBox='0 0 13 18'%3E%3Cpath d='M5.65376 12.3673H5.46026L5.31717 12.4976L0.500002 16.8829L0.500002 1.19841L11.7841 12.3673H5.65376Z' fill='%23B54329' stroke='%23fff'/%3E%3C/svg%3E") 1 2,pointer}
+/* Freelance status: rust dot that pulses beside Say hi */
+.st{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#B54329;white-space:nowrap}
+.st-dot{position:relative;width:8px;height:8px;border-radius:50%;background:#B54329;flex:none}
+.st-dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:#B54329;animation:stPulse 1.8s ease-out infinite}
+@keyframes stPulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(2.8);opacity:0}}
+@media (prefers-reduced-motion:reduce){.st-dot::after{animation:none}}
 a{color:inherit;text-decoration:none}
 .ma:hover,.ma:focus-visible{text-decoration:underline;text-underline-offset:3px}
 .bd{font-family:'ivypresto-display','Bodoni Moda',serif;font-weight:400;letter-spacing:-.02em}
@@ -71,46 +77,45 @@ div[style*="repeat(4,1fr)"]{grid-template-columns:repeat(2,1fr)!important}
 <div class="wrap" style="display:flex;flex-direction:column;gap:72px;padding-top:28px">
 
 <div style="display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between">
-<div style="display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #D5D1C0;border-radius:12px;padding:8px 14px 8px 8px;font-size:14px"><img src="/assets/img/logo.png" alt="Margaret Alba monogram" style="display:block;width:32px;height:32px;border-radius:50%;flex:none"><span><span style="color:#6B665E"><a href="https://www.margaretalba.com" class="ma" style="color:#6B665E">Margaret Alba</a> / Marketing portfolio /</span> <b style="font-weight:600">Stitch Fix Meta Growth Creative</b></span></div>
-<div style="display:flex;align-items:center;gap:20px;font-size:14px"><a href="/" style="color:#6B665E">← All work</a><a class="hv" href="mailto:hello@margaretalba.com" style="background:#B54329;color:#F9F9EE;border-radius:8px;padding:9px 18px;font-weight:600"><span class="fl" aria-hidden="true"></span>Say hi</a></div>
+<div style="display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #D5D1C0;border-radius:12px;padding:8px 14px 8px 8px;font-size:14px"><img src="/assets/img/logo.png" alt="Margaret Alba monogram" style="display:block;width:32px;height:32px;border-radius:50%;flex:none"><span><span style="color:#6B665E"><a href="https://www.margaretalba.com" class="ma" style="color:#6B665E">Margaret Alba</a> / <a href="/" class="ma" style="color:#6B665E">Marketing portfolio</a> /</span> <b style="font-weight:600">Stitch Fix Meta Growth Creative</b></span></div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px;font-size:14px"><a href="/" style="color:#6B665E">← All work</a><span class="st"><span class="st-dot" aria-hidden="true"></span>Booking freelance projects</span><a class="hv" href="mailto:hello@margaretalba.com" style="background:#B54329;color:#F9F9EE;border-radius:8px;padding:9px 18px;font-weight:600"><span class="fl" aria-hidden="true"></span>Say hi</a></div>
 </div>
 
 <div style="display:flex;flex-direction:column;gap:20px;max-width:820px">
 <div class="ey">Case study 02</div>
 <h1 class="bd" style="margin:0;font-size:72px;line-height:1.02;letter-spacing:-.03em">Stitch Fix Meta Growth Creative</h1>
-<p style="margin:0;font-size:22px;line-height:1.5;color:#3E3A34">Static and video ads for Stitch Fix’s women’s and men’s lines, plus the DPA and non-DPA assets behind them. The ads shown are from one campaign.</p>
+<p style="margin:0;font-size:22px;line-height:1.5;color:#3E3A34">Meta ads for Stitch Fix’s women’s and men’s lines, from statics and video to dynamic product ads. Everything shown here is from one campaign.</p>
 </div>
 
 <div style="display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start">
 
 <aside style="flex:0 0 240px;position:sticky;top:24px;display:flex;flex-direction:column;gap:28px;background:#fff;border:1px solid #D5D1C0;border-radius:12px;padding:16px">
-<div><div style="font-size:12px;font-weight:600;margin-bottom:8px">Layers</div><nav class="ly" aria-label="On this page" style="display:flex;flex-direction:column;gap:2px"><a class="on" href="#ch"><i></i>The challenge</a><a href="#ap"><i></i>The approach</a><a href="#wk"><i></i>What I made</a><a href="#rs"><i></i>Results</a><a href="#ln"><i></i>What I learned</a></nav></div>
+<div><div style="font-size:12px;font-weight:600;margin-bottom:8px">Layers</div><nav class="ly" aria-label="On this page" style="display:flex;flex-direction:column;gap:2px"><a class="on" href="#ch"><i></i>The challenge</a><a href="#ap"><i></i>The approach</a><a href="#wk"><i></i>What I made</a><a href="#ln"><i></i>What I learned</a></nav></div>
 <div style="border-top:1px solid #E5E1D0;padding-top:16px"><div style="font-size:12px;font-weight:600;margin-bottom:12px">Properties</div>
 <dl class="pr" style="margin:0;display:flex;flex-direction:column;gap:14px"><div><dt>Client</dt><dd>Stitch Fix</dd></div><div><dt>Responsible for</dt><dd>Meta DPA and non-DPA assets, social video, production timelines and asset tracking</dd></div><div><dt>Tools</dt><dd>Figma, After Effects</dd></div></dl></div>
 </aside>
 
 <main style="flex:1 1 560px;max-width:760px;display:flex;flex-direction:column;gap:80px">
 
-<section id="ch" style="display:flex;flex-direction:column;gap:14px"><div class="ey">The challenge</div><p class="p" style="font-size:20px">Stitch Fix is an online styling service that advertises on a lot of social platforms. For Meta, the ads had to bring in new clients, speak to women and men differently, and keep up with a steady calendar of promotions. That meant statics, video and dynamic product ads (DPA).</p></section>
+<section id="ch" style="display:flex;flex-direction:column;gap:14px"><div class="ey">The challenge</div><p class="p" style="font-size:20px">Stitch Fix is an online styling service. On Meta, the ads need to bring in new clients, speak to women and men differently and keep up with a busy promo calendar.</p></section>
 
 <section id="ap" style="display:flex;flex-direction:column;gap:28px"><div class="ey">The approach</div>
-<div><div class="bd sh">The offer stays the same.</div><p class="p">In the campaign shown here, every static has the same lime-green “$20 off your first Fix” badge. Whatever the outfit or headline, people can see the offer right away.</p></div>
-<div><div class="bd sh">Different hooks, same offer.</div><p class="p">Each ad led with something different: the season (“Spring style made easy”), a joke (“Side effects may include compliments”), news (“Big + Tall is here”) or reassurance (“All style, no risk”).</p></div>
-<div><div class="bd sh">Women’s and men’s each got their own look.</div><p class="p">Women’s ads used styled outfit collages. Men’s included a flat lay with the Stitch Fix box. Statics were square, and the videos were 9:16 vertical or 4:5.</p></div>
-<div><div class="bd sh">Keeping it on schedule.</div><p class="p">I also handled production timelines and asset tracking, and kept review rounds moving so the ads went out on time.</p></div>
+<div><div class="bd sh">One offer, always visible.</div><p class="p">New clients scroll fast. Keeping the same “$20 off your first Fix” badge on every ad means the offer lands even if someone only gives it a second.</p></div>
+<div><div class="bd sh">Different hooks, same offer.</div><p class="p">Different people stop scrolling for different reasons. Leading each ad with its own angle gives it a different way in, while the offer stays the same.</p></div>
+<div><div class="bd sh">Speaking to each audience.</div><p class="p">Women and men shop differently, so their ads shouldn’t look the same. Each line gets visuals built around how that audience likes to see clothes.</p></div>
+<div><div class="bd sh">Keeping it on schedule.</div><p class="p">Promos don’t wait. I run production timelines and asset tracking, so reviews keep moving and nothing misses its launch date.</p></div>
 </section>
 
 <section id="wk" style="display:flex;flex-direction:column;gap:32px"><div class="ey">What I made</div>
 <div><div class="fl"><span>Meta static ads, one campaign</span><span>01</span></div><div class="fm" style="padding:10px;background:#fff"><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px"><img loading="lazy" decoding="async" src="/assets/img/stitch-fix-1.webp" alt="Spring Style Made Easy: a striped dress with accessories beside the model wearing it, with a $20 off your first Fix badge."><img loading="lazy" decoding="async" src="/assets/img/stitch-fix-2.webp" alt="Side effects may include compliments: a flat lay of spring pieces with the $20 off badge."><img loading="lazy" decoding="async" src="/assets/img/stitch-fix-3.webp" alt="Big plus Tall is here: men’s jacket, polo, jeans and sneakers around a smiling model."><img loading="lazy" decoding="async" src="/assets/img/stitch-fix-4.webp" alt="All style, no risk: folded men’s clothing and a Stitch Fix box with the $20 off badge."></div></div></div>
 <div><div class="fl"><span>Meta video ads</span><span>02</span></div><div class="fm" style="background:#fff"><div style="display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; align-items: start; position: relative"><video src="/assets/video/stitch-fix-5.mp4" poster="/assets/img/stitch-fix-6.webp" autoplay="" muted="" loop="" playsinline="" preload="metadata" aria-label="Women’s Meta video ad, vertical" style="display:block;width:100%;height:auto;border-radius:8px;background:#E9E1D2"></video><video src="/assets/video/stitch-fix-7.mp4" poster="/assets/img/stitch-fix-8.webp" autoplay="" muted="" loop="" playsinline="" preload="metadata" aria-label="Women’s Meta video ad, vertical" style="display:block;width:100%;height:auto;border-radius:8px;background:#E9E1D2"></video><video src="/assets/video/stitch-fix-video-3.mp4" autoplay="" muted="" loop="" playsinline="" preload="metadata" aria-label="Meta video ad, vertical" style="display:block;width:100%;height:auto;border-radius:8px;background:#E9E1D2"></video><video src="/assets/video/stitch-fix-video-4.mp4" autoplay="" muted="" loop="" playsinline="" preload="metadata" aria-label="Meta video ad, vertical" style="display:block;width:100%;height:auto;border-radius:8px;background:#E9E1D2"></video></div></div></div>
-<p class="cap" style="margin:0">I also made the DPA and non-DPA assets for both lines of business.</p>
+<p class="cap" style="margin:0">Behind these, I design the DPA and non-DPA assets for both the women’s and men’s lines.</p>
 </section>
 
 
 
-<section id="rs" style="display:flex;flex-direction:column;gap:14px"><div class="ey">Results</div><p class="p">I haven’t put campaign numbers on this page. If you’d like to hear what I can share, <a href="mailto:hello@margaretalba.com" style="color:#8F3118;text-decoration:underline;text-underline-offset:3px">email me</a>.</p></section>
 
-<section id="ln" style="display:flex;flex-direction:column;gap:14px"><div class="ey">What I learned</div><p class="p">With a steady calendar of promotions, the schedule matters as much as the idea. Clear timelines and review rounds are how good ideas actually go out on time.</p></section>
+<section id="ln" style="display:flex;flex-direction:column;gap:14px"><div class="ey">What I learned</div><p class="p">An ad is a tiny space, so every part of it has to earn its place. I learned to start with the audience: what do new clients want, and what do they actually <em>need</em> to see to give Stitch Fix a try? Then I design for that. (I’ve done the same for lapsed clients, too.)</p></section>
 
 <a class="nx" href="/video" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;border-top:1px solid #2D2A25;padding-top:28px"><span style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#6B665E">Next case study</span><span class="nt bd" style="font-size:30px;transition:color .2s">Video and creator content →</span></a>
 
