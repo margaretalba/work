@@ -15,7 +15,7 @@ Static site, no build step. Open `index.html` through any web server to preview,
 4. DNS can take from a few minutes to a day to update.
 
 ## Before you share it
-- **Fonts:** headings use IvyPresto Headline and body text uses Inter, the same as the studio site at margaretalba.com. IvyPresto Headline loads from the Adobe Fonts web project `haz5lhc`, so it has to be added to that project. Until it is, headings fall back to Instrument Serif from Google Fonts.
+- **Fonts:** headings use IvyPresto Display and body text uses Inter, the same as the studio site at margaretalba.com. IvyPresto Display loads from the Adobe Fonts web project `haz5lhc`. If it ever goes missing from that project, headings fall back to Instrument Serif from Google Fonts.
 - **Search engines:** every page has `<meta name="robots" content="noindex">`, so Google won’t list the site; people only find it through a link you share. Delete that line from each page (and add a `sitemap.xml` back) when you want it findable.
 - **Link previews:** each page has its own 1200×630 preview image in `assets/img/og/`, shown when a link is shared on LinkedIn, Slack, iMessage and similar.
 - **Links:** About and the case studies live at `/about`, `/ltk-madewell`, `/stitch-fix-meta`, `/video`, `/ltk-adidas`, `/project-object` and `/more-to-say`. The Studio links go to margaretalba.com.
