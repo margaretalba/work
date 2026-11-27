@@ -88,12 +88,11 @@ a.hv[style] {
 .hv:hover, .hv.is-on { color: var(--g-rust) !important; }
 div:has(> a.hv + a.hv) { gap: 14px 32px !important; }
 
-/* ---- Title pages: centred, IvyPresto Thin capitals, a short rule ---- */
+/* ---- Title pages: IvyPresto Light, a rule underneath ---- */
 h1.bd {
   font-family: var(--g-roman) !important;
-  font-weight: 100 !important;
-  text-transform: uppercase;
-  letter-spacing: -.03em !important;
+  font-weight: 300 !important;
+  letter-spacing: -.025em !important;
   line-height: 1.02 !important;
   font-size: clamp(2.4rem, 5.4vw, 4rem) !important;
   text-wrap: balance;
@@ -163,11 +162,10 @@ h1.bd {
 .sel { border-radius: 0 !important; inset: 22px -6px 18px -6px !important; }
 h2.ct {
   font-family: var(--g-roman) !important;
-  font-weight: 300 !important;
-  text-transform: uppercase;
-  letter-spacing: -.02em !important;
-  font-size: 22px !important;
-  line-height: 1.15 !important;
+  font-weight: 400 !important;
+  letter-spacing: -.015em !important;
+  font-size: 26px !important;
+  line-height: 1.2 !important;
   color: var(--g-ink);
 }
 .fr:hover h2.ct { color: var(--g-rust); }
@@ -218,7 +216,7 @@ aside > div + div { border-top-color: var(--g-rule) !important; }
 
 .nx { border-top: 1px solid var(--g-ink) !important; }
 .nx > span:first-child { color: var(--g-gray) !important; }
-.nx .nt { text-transform: uppercase; font-weight: 100 !important; letter-spacing: -.02em; }
+.nx .nt { font-weight: 300 !important; letter-spacing: -.02em; }
 .nx:hover .nt { color: var(--g-rust) !important; }
 div[style*="border-top:1px solid #2D2A25"] { border-top-color: var(--g-ink) !important; }
 
@@ -271,13 +269,10 @@ a, button, summary, label, [role=button] { cursor: pointer !important; }
   border: 0 !important;
   padding: 0 !important;
   font-family: var(--g-sans) !important;
-  font-size: 11px !important;
-  font-weight: 500;
-  letter-spacing: .08em;
-  text-transform: uppercase;
+  font-size: 14px !important;
   color: var(--g-gray);
 }
-.bub a { color: var(--g-rust) !important; font-weight: 500 !important; text-decoration: underline; text-underline-offset: 3px; }
+.bub a { color: var(--g-rust) !important; font-weight: 400 !important; text-decoration: underline; text-underline-offset: 3px; }
 
 /* The nav sits on its rules at the end of the page instead of floating */
 div[style*="position:sticky;bottom:20px"] { position: static !important; margin-top: 24px; }
