@@ -272,7 +272,45 @@ a, button, summary, label, [role=button] { cursor: pointer !important; }
   font-size: 14px !important;
   color: var(--g-gray);
 }
-.bub a { color: var(--g-rust) !important; font-weight: 400 !important; text-decoration: underline; text-underline-offset: 3px; }
+.bub > div:last-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px 10px;
+  flex-wrap: wrap;
+  font-family: var(--g-roman) !important;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 18px !important;
+  color: var(--g-cocoa) !important;
+}
+/* A little wax-carved signet ring that tips toward the link on hover */
+.bub > div:last-child::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  flex: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232D2A25' stroke-width='1' stroke-linecap='round'%3E%3Ccircle cx='12' cy='14.5' r='6.5'/%3E%3Ccircle cx='12' cy='14.5' r='4.6'/%3E%3Cellipse cx='12' cy='7' rx='5.2' ry='2.7' fill='%23F8F8ED'/%3E%3Cpath d='M10 7.3c.6-1 1.2-1 1.6 0 .4-1 1-1 1.6 0'/%3E%3C/svg%3E") center / contain no-repeat;
+  transform-origin: 50% 70%;
+  transition: transform .5s cubic-bezier(.3,1.6,.5,1);
+}
+.bub:hover > div:last-child::before { transform: rotate(-14deg) translateY(-2px); }
+.bub a {
+  font-family: var(--g-sans) !important;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--g-rust) !important;
+  font-weight: 400 !important;
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--g-rust) 35%, transparent);
+  padding-bottom: 1px;
+  transition: border-color .2s, letter-spacing .3s;
+}
+.bub a:hover { border-bottom-color: var(--g-rust); letter-spacing: .16em; }
+@media (prefers-reduced-motion: reduce) {
+  .bub > div:last-child::before, .bub a { transition: none; }
+}
 
 /* The nav sits on its rules at the end of the page instead of floating */
 div[style*="position:sticky;bottom:20px"] { position: static !important; margin-top: 24px; }
