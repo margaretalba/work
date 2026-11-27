@@ -21,7 +21,7 @@ body,
 .cv { color: var(--g-ink) !important; }
 ::selection { background: #ede3c9aa; }
 
-/* Small Inter caps, for labels and links */
+/* Small Inter caps, tracked like margaretalba.com's "WORKSHOPS" and "BOOK A SEAT" */
 .ey,
 .fl,
 .pr dt,
@@ -34,11 +34,11 @@ body,
 .ft,
 div[style*="text-transform:uppercase"] {
   font-family: var(--g-sans) !important;
-  font-size: 11px !important;
-  font-weight: 500 !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
   font-style: normal !important;
   line-height: 1.5 !important;
-  letter-spacing: .08em !important;
+  letter-spacing: .12em !important;
   text-transform: uppercase !important;
 }
 
@@ -52,24 +52,24 @@ div[style*="text-transform:uppercase"] {
 .wrap > div:first-child > div:first-child > img { display: none !important; }
 .wrap > div:first-child > div:first-child > span {
   font-family: var(--g-sans);
-  font-size: 11px !important;
-  font-weight: 500;
-  letter-spacing: .08em;
+  font-size: 12px !important;
+  font-weight: 400;
+  letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--g-gray);
 }
 .wrap > div:first-child > div:first-child > span > span { color: var(--g-gray) !important; }
 .wrap > div:first-child > div:first-child a.ma,
-.wrap > div:first-child > div:first-child b { color: var(--g-gray) !important; font-weight: 500 !important; }
+.wrap > div:first-child > div:first-child b { color: var(--g-gray) !important; font-weight: 400 !important; }
 .wrap > div:first-child > div:first-child a.ma:first-child {
   color: var(--g-ink) !important;
 }
 .wrap > div:first-child > div:first-child a.ma:hover { text-decoration: none; color: var(--g-rust) !important; }
 .wrap > div:first-child > div:last-child > a:not(.hv) {
   font-family: var(--g-sans);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: .08em;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .12em;
   text-transform: uppercase;
 }
 .st { color: var(--g-rust) !important; }
@@ -88,10 +88,10 @@ a.hv[style] {
 .hv:hover, .hv.is-on { color: var(--g-rust) !important; }
 div:has(> a.hv + a.hv) { gap: 14px 32px !important; }
 
-/* ---- Title pages: IvyPresto Light, a rule underneath ---- */
+/* ---- Title pages: IvyPresto Display Thin, as on margaretalba.com, with a rule underneath ---- */
 h1.bd {
   font-family: var(--g-roman) !important;
-  font-weight: 300 !important;
+  font-weight: 100 !important;
   letter-spacing: -.025em !important;
   line-height: 1.02 !important;
   font-size: clamp(2.4rem, 5.4vw, 4rem) !important;
@@ -108,7 +108,7 @@ h1.bd {
 .wrap > div:has(> h1.bd) > .ey,
 .wrap > div:has(> h1.bd) > div[style*="text-transform:uppercase"] {
   color: var(--g-gray) !important;
-  font-size: 10px !important;
+  font-size: 11px !important;
 }
 .bub > div:last-child {
   background: var(--g-light) !important;
@@ -154,15 +154,15 @@ h1.bd {
   border: 0 !important;
   border-radius: 0 !important;
   font-family: var(--g-sans) !important;
-  font-size: 10px !important;
-  font-weight: 500 !important;
-  letter-spacing: .08em;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  letter-spacing: .12em;
   text-transform: uppercase;
 }
 .sel { border-radius: 0 !important; inset: 22px -6px 18px -6px !important; }
 h2.ct {
   font-family: var(--g-roman) !important;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
   letter-spacing: -.015em !important;
   font-size: 26px !important;
   line-height: 1.2 !important;
@@ -188,9 +188,9 @@ aside {
 aside > div > div:first-child,
 aside div[style*="font-weight:600"] {
   font-family: var(--g-sans) !important;
-  font-size: 11px !important;
-  font-weight: 500 !important;
-  letter-spacing: .08em;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: .12em;
   text-transform: uppercase;
 }
 aside > div + div { border-top-color: var(--g-rule) !important; }
@@ -198,7 +198,7 @@ aside > div + div { border-top-color: var(--g-rule) !important; }
 .ly i { display: none !important; }
 .ly a.on { background: transparent !important; color: var(--g-rust) !important; font-style: italic; font-weight: 400 !important; }
 .ly a:hover { color: var(--g-cocoa) !important; }
-.pr dt { color: var(--g-gray) !important; font-size: 10px !important; }
+.pr dt { color: var(--g-gray) !important; font-size: 11px !important; }
 .pr dd { font-size: 13px !important; }
 
 .fm {
@@ -207,7 +207,7 @@ aside > div + div { border-top-color: var(--g-rule) !important; }
   border-radius: 0 !important;
 }
 .fm img, .fm video, .fm iframe { border-radius: 0 !important; }
-.fl { color: var(--g-gray) !important; font-size: 10px !important; }
+.fl { color: var(--g-gray) !important; font-size: 11px !important; }
 
 .ch-t { background: transparent !important; border: 0 !important; border-radius: 0 !important; }
 .ch-t thead th { color: var(--g-gray) !important; border-bottom: 1px solid var(--g-ink) !important; }
@@ -216,7 +216,7 @@ aside > div + div { border-top-color: var(--g-rule) !important; }
 
 .nx { border-top: 1px solid var(--g-ink) !important; }
 .nx > span:first-child { color: var(--g-gray) !important; }
-.nx .nt { font-weight: 300 !important; letter-spacing: -.02em; }
+.nx .nt { font-weight: 100 !important; letter-spacing: -.02em; }
 .nx:hover .nt { color: var(--g-rust) !important; }
 div[style*="border-top:1px solid #2D2A25"] { border-top-color: var(--g-ink) !important; }
 
@@ -241,9 +241,9 @@ a:focus-visible { outline: 1px solid var(--g-rust) !important; outline-offset: 3
 /* Frame names as small caps, like the garden's listing meta */
 .fr > div:first-child {
   font-family: var(--g-sans) !important;
-  font-size: 10px !important;
-  font-weight: 500;
-  letter-spacing: .08em;
+  font-size: 11px !important;
+  font-weight: 400;
+  letter-spacing: .12em;
   text-transform: uppercase;
 }
 
@@ -280,3 +280,7 @@ div[style*="position:sticky;bottom:20px"] { position: static !important; margin-
 /* Hover: the title changes colour, nothing else */
 .fr:hover .ph img { opacity: .92; }
 .ph > div[aria-hidden] > span { display: none !important; }
+@media (max-width: 420px) {
+  .tb { gap: 0 !important; padding: 4px 0 !important; }
+  .tb a { padding: 6px 7px !important; letter-spacing: .08em !important; }
+}
