@@ -10,8 +10,6 @@
   --g-rust: #B54328;
   --g-cocoa: #625448;
   --g-roman: "ivypresto-display", "Cormorant Garamond", Georgia, serif;
-  --g-swash: "altesse-std-24pt", "Pinyon Script", cursive;
-  --g-script: "Pinyon Script", cursive;
   --g-sans: Inter, "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -44,7 +42,7 @@ div[style*="text-transform:uppercase"] {
   text-transform: uppercase !important;
 }
 
-/* ---- Header: script wordmark, no pill ---- */
+/* ---- Header: name in small caps, no pill ---- */
 .wrap > div:first-child > div:first-child {
   background: transparent !important;
   border: 0 !important;
@@ -64,16 +62,7 @@ div[style*="text-transform:uppercase"] {
 .wrap > div:first-child > div:first-child a.ma,
 .wrap > div:first-child > div:first-child b { color: var(--g-gray) !important; font-weight: 500 !important; }
 .wrap > div:first-child > div:first-child a.ma:first-child {
-  display: inline-block;
-  margin-right: 6px;
-  font-family: var(--g-script);
-  font-size: 32px;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1;
-  text-transform: none;
   color: var(--g-ink) !important;
-  vertical-align: -6px;
 }
 .wrap > div:first-child > div:first-child a.ma:hover { text-decoration: none; color: var(--g-rust) !important; }
 .wrap > div:first-child > div:last-child > a:not(.hv) {
@@ -111,20 +100,17 @@ h1.bd {
 }
 .wrap > div:nth-child(2):has(> h1),
 .wrap > div:has(> h1.bd) {
-  max-width: 860px !important;
-  margin: 0 auto;
-  align-items: center;
-  text-align: center;
+  max-width: none !important;
   padding-bottom: 40px;
   border-bottom: 1px solid var(--g-rule);
 }
-.wrap > div:has(> h1.bd) > p { margin-left: auto !important; margin-right: auto !important; }
+.wrap > div:has(> h1.bd) > h1 { max-width: 900px; }
+.wrap > div:has(> h1.bd) > p { max-width: 720px !important; }
 .wrap > div:has(> h1.bd) > .ey,
 .wrap > div:has(> h1.bd) > div[style*="text-transform:uppercase"] {
   color: var(--g-gray) !important;
   font-size: 10px !important;
 }
-.wrap > div:has(> h1.bd) > div[style*="flex-wrap:wrap;gap:20px 40px"] { justify-content: center; }
 .bub > div:last-child {
   background: var(--g-light) !important;
   border-radius: 0 !important;
@@ -265,7 +251,6 @@ a:focus-visible { outline: 1px solid var(--g-rust) !important; outline-offset: 3
 
 @media (max-width: 700px) {
   .wrap > div:first-child > div:first-child > span { line-height: 1.7; }
-  .wrap > div:first-child > div:first-child a.ma:first-child { display: block; margin: 6px 0 4px; vertical-align: 0; font-size: 30px; }
   .wrap > div:has(> h1.bd) > p { font-size: 18px !important; }
 }
 
@@ -277,7 +262,6 @@ a, button, summary, label, [role=button] { cursor: pointer !important; }
 /* The wax carving note becomes a quiet line under the results */
 .bub {
   position: static !important;
-  justify-content: center;
   margin-top: 4px;
 }
 .bub > div:first-child { display: none !important; }
