@@ -274,3 +274,36 @@ a:focus-visible { outline: 1px solid var(--g-rust) !important; outline-offset: 3
   .wrap > div:first-child > div:first-child a.ma:first-child { display: block; margin: 6px 0 4px; vertical-align: 0; font-size: 30px; }
   .wrap > div:has(> h1.bd) > p { font-size: 18px !important; }
 }
+
+/* ---- Less Figma: plain cursor, no selection boxes, no comment pin ---- */
+html { cursor: auto !important; }
+a, button, summary, label, [role=button] { cursor: pointer !important; }
+.sel, .hn, .gc { display: none !important; }
+
+/* The wax carving note becomes a quiet line under the results */
+.bub {
+  position: static !important;
+  justify-content: center;
+  margin-top: 4px;
+}
+.bub > div:first-child { display: none !important; }
+.bub > div:last-child {
+  width: auto !important;
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  font-family: var(--g-sans) !important;
+  font-size: 11px !important;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--g-gray);
+}
+.bub a { color: var(--g-rust) !important; font-weight: 500 !important; text-decoration: underline; text-underline-offset: 3px; }
+
+/* The nav sits on its rules at the end of the page instead of floating */
+div[style*="position:sticky;bottom:20px"] { position: static !important; margin-top: 24px; }
+
+/* Hover: the title changes colour, nothing else */
+.fr:hover .ph img { opacity: .92; }
+.ph > div[aria-hidden] > span { display: none !important; }
