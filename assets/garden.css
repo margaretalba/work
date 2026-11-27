@@ -257,27 +257,27 @@ html { cursor: auto !important; }
 a, button, summary, label, [role=button] { cursor: pointer !important; }
 .sel, .hn, .gc { display: none !important; }
 
-/* The wax carving note as a faded rubber stamp, like a library or ex libris mark,
-   set a little crooked beside the results. It inks up on hover. */
-.bub {
-  position: static !important;
-  margin-top: 8px;
+/* A colophon at the end of every page, the way a book ends with a note on how it was made */
+.colophon {
+  margin: 28px auto 0;
+  max-width: 36em;
+  text-align: center;
+  font-family: var(--g-roman);
+  font-weight: 300;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--g-gray);
 }
-.stamp {
-  display: inline-block;
-  width: 104px;
-  color: var(--g-rust) !important;
-  opacity: .42;
-  transform: rotate(-9deg);
-  transition: opacity .3s, transform .45s cubic-bezier(.3, 1.4, .5, 1);
+.colophon a {
+  color: inherit !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--g-rule);
+  text-underline-offset: 3px;
+  transition: color .2s, text-decoration-color .2s;
 }
-.stamp svg { display: block; width: 100%; height: auto; overflow: visible; }
-.stamp:hover, .stamp:focus-visible { opacity: .95; transform: rotate(-3deg) scale(1.03); }
-@media (min-width: 1100px) {
-  .bub { position: absolute !important; right: 8px !important; top: auto !important; bottom: 34px; margin: 0; }
-  .stamp { width: 118px; }
-}
-@media (prefers-reduced-motion: reduce) { .stamp { transition: none; } }
+.colophon a:hover { color: var(--g-rust) !important; text-decoration-color: currentColor; }
 
 /* The nav sits on its rules at the end of the page instead of floating */
 div[style*="position:sticky;bottom:20px"] { position: static !important; margin-top: 24px; }
