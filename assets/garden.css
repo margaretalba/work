@@ -1,6 +1,5 @@
 /* Bookish look from garden.margaretalba.com, layered over each page's own styles.
-   Studio cream and ink, IvyPresto Thin capitals with an Altesse swash initial,
-   Inter text, small Inter caps labels and pencil rules instead of cards.
+   Studio cream and ink, IvyPresto Thin capitals, Inter text, small Inter caps labels and pencil rules instead of cards.
    The Figma cursor and the hover selection stay. */
 
 :root {
@@ -100,7 +99,7 @@ a.hv[style] {
 .hv:hover, .hv.is-on { color: var(--g-rust) !important; }
 div:has(> a.hv + a.hv) { gap: 14px 32px !important; }
 
-/* ---- Title pages: centred, IvyPresto Thin capitals, swash initial, a short rule ---- */
+/* ---- Title pages: centred, IvyPresto Thin capitals, a short rule ---- */
 h1.bd {
   font-family: var(--g-roman) !important;
   font-weight: 100 !important;
@@ -109,11 +108,6 @@ h1.bd {
   line-height: 1.02 !important;
   font-size: clamp(2.4rem, 5.4vw, 4rem) !important;
   text-wrap: balance;
-}
-h1.bd::first-letter {
-  font-family: var(--g-swash);
-  font-weight: 400;
-  letter-spacing: .02em;
 }
 .wrap > div:nth-child(2):has(> h1),
 .wrap > div:has(> h1.bd) {
