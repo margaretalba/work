@@ -291,15 +291,8 @@ div[style*="position:sticky;bottom:20px"] { position: static !important; margin-
 }
 
 /* ---- The homepage hello, redrawn for the bookish look ----
-   A fine ink line draws itself under "designer's eye", then the wax carving
-   aside fades in beside the headline, the way the Figma cursor used to. */
-.ink {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 10' preserveAspectRatio='none'%3E%3Cpath d='M2 6.5 C 60 3.5, 120 8.5, 180 5.2 S 270 4.2, 298 6' fill='none' stroke='%23B54328' stroke-opacity='.55' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat 0 100% / 0% .16em;
-  padding-bottom: .1em;
-  animation: inkDraw 1.2s cubic-bezier(.6, .1, .3, 1) .7s forwards;
-}
-@keyframes inkDraw { to { background-size: 100% .16em; } }
-/* Wax carving, as a small italic aside beside the headline. It fades in once the ink line is drawn. */
+   The wax carving aside fades in beside the intro, the way the Figma cursor used to. */
+/* Wax carving, as a small italic aside beside the intro. */
 .wax {
   margin: 0;
   font-family: var(--g-roman);
@@ -308,7 +301,7 @@ div[style*="position:sticky;bottom:20px"] { position: static !important; margin-
   font-size: 18px;
   line-height: 1.4;
   color: var(--g-gray);
-  animation: noteIn 1s cubic-bezier(.22, .8, .3, 1) 1.9s both;
+  animation: noteIn 1.1s cubic-bezier(.22, .8, .3, 1) .9s both;
 }
 .wax::before { content: "— "; }
 .wax a {
@@ -325,7 +318,6 @@ div[style*="position:sticky;bottom:20px"] { position: static !important; margin-
   .wax { position: absolute; right: 0; top: 150px; max-width: 200px; text-align: right; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .ink { animation: none; background-size: 100% .16em; }
   .wax { animation: none; }
 }
 @media (min-width: 1100px) { .wrap > div:has(> h1.bd):has(> .wax) > p:not(.wax) { max-width: 600px !important; } }
