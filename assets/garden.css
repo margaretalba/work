@@ -257,43 +257,27 @@ html { cursor: auto !important; }
 a, button, summary, label, [role=button] { cursor: pointer !important; }
 .sel, .hn, .gc { display: none !important; }
 
-/* The wax carving note, set like the title on a book's spine: one line of
-   small caps running up the right edge of the top of the page, between rules. */
+/* The wax carving note as a faded rubber stamp, like a library or ex libris mark,
+   set a little crooked beside the results. It inks up on hover. */
 .bub {
   position: static !important;
-  margin-top: 4px;
+  margin-top: 8px;
 }
-.spine {
-  font-family: var(--g-sans);
-  font-size: 10px;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--g-gray) !important;
-  text-decoration: none;
-  transition: color .2s;
+.stamp {
+  display: inline-block;
+  width: 104px;
+  color: var(--g-rust) !important;
+  opacity: .42;
+  transform: rotate(-9deg);
+  transition: opacity .3s, transform .45s cubic-bezier(.3, 1.4, .5, 1);
 }
-.spine:hover { color: var(--g-rust) !important; }
+.stamp svg { display: block; width: 100%; height: auto; overflow: visible; }
+.stamp:hover, .stamp:focus-visible { opacity: .95; transform: rotate(-3deg) scale(1.03); }
 @media (min-width: 1100px) {
-  .bub {
-    position: absolute !important;
-    top: 0 !important;
-    right: 0 !important;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    margin: 0;
-  }
-  .spine {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    white-space: nowrap;
-    letter-spacing: .14em;
-    padding: 12px 7px;
-    border-left: 1px solid var(--g-rule);
-    border-right: 1px solid var(--g-rule);
-  }
-  .spine:hover { border-color: var(--g-rust); }
+  .bub { position: absolute !important; right: 8px !important; top: auto !important; bottom: 34px; margin: 0; }
+  .stamp { width: 118px; }
 }
+@media (prefers-reduced-motion: reduce) { .stamp { transition: none; } }
 
 /* The nav sits on its rules at the end of the page instead of floating */
 div[style*="position:sticky;bottom:20px"] { position: static !important; margin-top: 24px; }
